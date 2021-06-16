@@ -1,0 +1,12 @@
+{
+    "lessons": [
+        {
+            "id": "l01",
+            "branch": "lesson-01",
+            "name": "Explaining project",
+            "workflow_json": "lesson-01.json",
+            "workflow_audio": "lesson-01.mp3",
+            "workflow_audio_start": 10
+        }
+    ]
+}
