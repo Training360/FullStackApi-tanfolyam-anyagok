@@ -6,7 +6,8 @@
             "name": "Fetch solution",
             "workflow_json": "lesson-01.json",
             "workflow_audio": "lesson-01.mp3",
-            "workflow_audio_start": 0
+            "workflow_audio_start": 0,
+            "workflow_audio_stop": 3
         }
     ]
 }
