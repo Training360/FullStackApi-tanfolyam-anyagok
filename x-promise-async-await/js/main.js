@@ -13,3 +13,7 @@ fetch('img/ast-async2-pipe.jpg')
     .catch( e => {
         console.log(`Error: ${e.message}`);
     });
+
+const getImage = () => {
+
+}
