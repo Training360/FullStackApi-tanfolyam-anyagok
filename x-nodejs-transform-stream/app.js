@@ -22,6 +22,21 @@ class TitleCaseStream extends Transform {
     };
 }
 
+class JsonStream extends Transform {
+    constructor() {
+        super();
+    }
+
+    // A _transform metódus felel az átalakításért.
+    _transform(chunk, enc, done) {
+        // A chunk.toString azért kell, mert Buffert kapunk, ami nem 
+        // karaktereket, hanem bájtokat tartalmaz.
+        const output = JSON.stringify( { data: chunk.toString('utf8') } );
+        this.push(output);
+        done();
+    };
+}
+
 const rStream = createReadStream(
     path.join(__dirname, 'sourceFile.txt'),
     {
@@ -39,4 +54,4 @@ wStream.on('finish', () => {
     console.log('File transform successful.');
 });
 
-rStream.pipe(new TitleCaseStream()).pipe(wStream);
+rStream.pipe(new TitleCaseStream()).pipe(new JsonStream()).pipe(wStream);
