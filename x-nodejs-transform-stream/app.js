@@ -41,7 +41,7 @@ const rStream = createReadStream(
     path.join(__dirname, 'sourceFile.txt'),
     {
         encoding: 'utf8',
-        highWaterMark: 1024
+        highWaterMark: 512 * 1024
     }
 );
 
