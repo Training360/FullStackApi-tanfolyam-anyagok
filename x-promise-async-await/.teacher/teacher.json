@@ -2,11 +2,12 @@
     "lessons": [
         {
             "id": "l01",
-            "branch": "lesson-01",
-            "name": "Explaining project",
+            "branch": "x-promise-async-await-l01",
+            "name": "Fetch solution",
             "workflow_json": "lesson-01.json",
             "workflow_audio": "lesson-01.mp3",
-            "workflow_audio_start": 10
+            "workflow_audio_start": 0,
+            "workflow_audio_stop": 3
         }
     ]
 }
