@@ -9,7 +9,9 @@ yargs
     .command({
         command: 'get',
         describe: 'Get all movies',
-        handler: async () => console.log( await movieService.getAllMovies() )
+        handler: async () => {
+            console.log( await movieService.getAllMovies() );
+        }
     })
     .locale('en')
     .strict()

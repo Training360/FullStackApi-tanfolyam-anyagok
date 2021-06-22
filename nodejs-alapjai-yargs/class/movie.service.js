@@ -16,6 +16,6 @@ module.exports = class MovieService {
             await this.init();
         }
         
-        return await this.movies;
+        return this.movies;
     }
 }

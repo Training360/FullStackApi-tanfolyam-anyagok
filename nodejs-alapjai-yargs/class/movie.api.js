@@ -15,13 +15,13 @@ module.exports = class MovieAPI {
     constructor(path, prop) {
         this.path = path;
         this.prop = prop;
-        this.init();
         this.list = null;
+        this.init();
     }
 
     // './database/movies.json', 'movies'
     async init() {
-        const dataString = await readFile(this.path);
+        const dataString = await readFile(this.path, 'utf8');
         this.list = JSON.parse(dataString)[this.prop];
     }
 
