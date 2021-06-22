@@ -7,10 +7,18 @@ yargs
     .version('1.0.0')
     .usage('Usage: <command> [options]')
     .command({
-        command: 'get',
+        command: 'getall',
         describe: 'Get all movies',
         handler: async () => {
             console.log( await movieService.getAllMovies() );
+        }
+    })
+    .command({
+        command: 'find',
+        describe: 'Get one movie',
+        builder: { id },
+        handler: async (args) => {
+            console.log( await movieService.getMovie(args.id) );
         }
     })
     .locale('en')

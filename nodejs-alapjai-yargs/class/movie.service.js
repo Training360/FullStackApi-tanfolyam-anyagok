@@ -18,4 +18,14 @@ module.exports = class MovieService {
         
         return this.movies;
     }
+
+    async getMovie(id) {
+        if (!this.movies) {
+            await this.init();
+        }
+
+        return this.movies.filter(
+            movie => movie.id === id
+        )[0];
+    }
 }
