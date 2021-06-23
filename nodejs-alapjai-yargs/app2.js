@@ -1,3 +1,4 @@
+// npm i
 const yargs = require('yargs');
 const { id, producer, title } = require('./options');
 const MovieService = require('./class/movie.service');
